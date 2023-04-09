@@ -22,26 +22,26 @@
                "text/html": {
                  "schema": {
                    "type": "string"}}}}}}},
-                   "/user": {
+                   "/product": {
                      "get": {
-                       "summary": "Returns the user with the specified name and surname",
+                       "summary": "Returns the product with the specified title and price",
                        "parameters": [
                          {
-                           "name": "name",
+                           "name": "title",
                            "in": "query",
-                           "description": "The name of the user",
+                           "description": "The title of the product",
                            "required": false,
                            "schema": {
                              "type": "string"}},
                          {
-                           "name": "surname",
+                           "name": "price",
                            "in": "query",
-                           "description": "The surname of the user",
+                           "description": "The price of the product",
                            "required": false,
                            "schema": {"type": "string"}}],
                        "responses": {
                          "200": {
-                           "description": "The user with the specified name and surname",
+                           "description": "The user with the specified title and price",
                            "content": {
                              "application/json": {
                                "schema": {
@@ -49,8 +49,8 @@
                                  "properties": {
                                    "user_name": {
                                      "type": "string",
-                                     "description": "The name of the user"},
+                                     "description": "The title of the product"},
                                    "user_surname": {
                                      "type": "string",
-                                     "description": "The surname of the user"}}}}}}}}}}}
+                                     "description": "The price of the product"}}}}}}}}}}}
                
