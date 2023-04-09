@@ -1,0 +1,56 @@
+{
+   "openapi": "3.0.0",
+   "info": {
+     "title": "Express API",
+     "version": "1.0.0",
+     "description": "A sample API for learning Express"
+   },
+   "servers": [
+     {
+       "url": "http://localhost:8000",
+       "description": "Local development server"
+     }
+   ],
+   "paths": {
+     "/": {
+       "get": {
+         "summary": "Returns the home page",
+         "responses": {
+           "200": {
+             "description": "The home page",
+             "content": {
+               "text/html": {
+                 "schema": {
+                   "type": "string"}}}}}}},
+                   "/user": {
+                     "get": {
+                       "summary": "Returns the user with the specified name and surname",
+                       "parameters": [
+                         {
+                           "name": "name",
+                           "in": "query",
+                           "description": "The name of the user",
+                           "required": false,
+                           "schema": {
+                             "type": "string"}},
+                         {
+                           "name": "surname",
+                           "in": "query",
+                           "description": "The surname of the user",
+                           "required": false,
+                           "schema": {"type": "string"}}],
+                       "responses": {
+                         "200": {
+                           "description": "The user with the specified name and surname",
+                           "content": {
+                             "application/json": {
+                               "schema": {
+                                 "type": "object",
+                                 "properties": {
+                                   "user_name": {
+                                     "type": "string",
+                                     "description": "The name of the user"},
+                                   "user_surname": {
+                                     "type": "string",
+                                     "description": "The surname of the user"}}}}}}}}}}}
+               
